@@ -33,7 +33,8 @@ for row in rows:
     rows_by_date[row['date']].append(row)
 
 for i in rows_by_date:
+    print(i)
     for j in rows_by_date[i]:
-    	print(j)
+        print(' ', j)
 
 print(rows_by_date)
