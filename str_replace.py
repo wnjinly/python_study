@@ -22,3 +22,11 @@ print(datepat.sub(change_date, text))
 newtext, n = datepat.subn(r'\3-\1-\2',text)
 print(newtext)
 print(n)
+
+
+# 忽略大小写，可以使用re.IGNORECASE
+text = 'UPPER PYTHON, lower python, Mixed Python'
+a = re.findall('python',text,flags=IGNORECASE)
+print(a)
+b = re.sub('python', 'snake', text, flags=IGNORECASE)
+print(b)
