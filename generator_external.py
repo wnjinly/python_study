@@ -28,3 +28,14 @@ with open('somefile.txt') as f:
         if 'python' in line:
             for lineno, hline in lines.history:
                 print('{}:{}'.format(lineno, hline), end='')
+print("============")
+# 需要注意的是，如果迭代操作不适用for循环，需要先调用iter()函数
+f = open('somefile.txt')
+lines = linehistory(f)
+# next(lines)
+# Traceback (most recent call last):
+#   File "D:\Project\python_study\generator_external.py", line 35, in <module>
+#     next(lines)
+# TypeError: 'linehistory' object is not an iterator
+it = iter(lines)
+print(next(it))
